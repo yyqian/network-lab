@@ -1,6 +1,7 @@
 package com.yyqian;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
@@ -9,6 +10,7 @@ import io.netty.util.ReferenceCountUtil;
  * Author: Yinyin Qian
  * Date: 2018-06-19
  */
+@Sharable
 public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
